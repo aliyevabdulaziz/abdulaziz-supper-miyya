@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>super miyya</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css" />
+	</head>
+	<body>
+		<div class="container site-container">
+			<div class="content">
+				<p class="time">15-16-17-Aprel | Soat 20:00 da</p>
+				<p class="davron">Davronbek Turdievdan 3 kunlik BEPUL masterklass</p>
+				<h2 class="none">MIYA SIRLARI</h2>
+				<h2 class="title">
+					Bu yangi usul orqali o'quvchim 1 kunda 1,280 ta chet tili so'zlarini eslab qoldi. Yangi usulni siz ham o'rganing.
+				</h2>
+				<img class="active" src="img/miyya.png" alt="img" />
+				<button onclick="openModal()" class="btn active open-btn">ISHTIROK ETISH</button>
+				<h2 class="title-2 active">BEPUL BEPUL</h2>
+				<div class="master">
+					<h3 class="master-title">Masterklassda siz:</h3>
+					<ul class="list">
+						<li class="item">
+							<img src="img/Ellipse_163_1.webp.svg" alt="img" />
+							<p class="master-text">Qanday qilib diqqatni jamlash orqali chalg'imasdan soatlab ishlash va o'qishni</p>
+						</li>
+						<li class="item">
+							<img src="img/Ellipse_163_1.webp.svg" alt="img" />
+							<p class="master-text">
+								Qanday qilib miyaning bor kuchidan foydalanib, dangasalikni yengishni va istalgan maqsadga erishishni
+							</p>
+						</li>
+						<li class="item">
+							<img src="img/Ellipse_163_1.webp.svg" alt="img" />
+							<p class="master-text">
+								Qanday qilib chet tili so'zlarini, kitobdagi ma'lumotlarni tez hamda oson eslab qolishni va xotirangizni 10
+								barobar kuchaytirishni ko'rib chiqamiz.
+							</p>
+						</li>
+					</ul>
+				</div>
+				<h2 class="title-2">BEPUL BEPUL</h2>
+				<button onclick="openModal()" class="btn open-btn">ISHTIROK ETISH</button>
+			</div>
+			<div class="img">
+				<img class="img1" src="img/miyya.png" alt="img" />
+			</div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal()">&times;</span>
+					<h2>Davom etish uchun ma'lumotlaringizni kiriting</h2>
+
+					<label for="name">Ismingiz</label>
+					<input type="text" id="name" placeholder="Ismingizni kiriting" />
+					<small class="error-msg" id="nameError">Required field</small>
+
+					<label for="phone">Telefon raqamingiz</label>
+					<div class="phone-wrapper">
+						<input type="tel" id="phone" placeholder="99-999-9999" />
+					</div>
+					<small class="error-msg" id="phoneError">Required field</small>
+
+					<div id="formAlert" class="form-alert">Please fill in all required fields</div>
+
+					<a  class="submit-btn" onclick="validateForm()">DAVOM ETISH</a>
+				</div>
+			</div>
+		</div>
+
+		<footer class="site-footer">
+			<div class="footer-content">
+				<h2>Davronbek Turdiev</h2>
+				<p class="phone">+998 78 113 90 90</p>
+				<p>
+					"SUPERMIYA PRODUCTION" MCHJ<br />
+					Bogʻishamol MFY, Amir Temur shoh ko‘chasi<br />
+					Hisob raqam: 20208000600572456001 Bank: Anorbank AJ INN: 310352855 MFY: 01183
+				</p>
+				<p class="disclaimer">
+					This site or product is not part of or endorsed by Facebook, Google, or any social<br />
+					media platform in any way. FACEBOOK is a trademark of META PLATFORMS, Inc.<br />
+					YOUTUBE and GOOGLE are trademarks of ALPHABET, Inc.
+				</p>
+				<p>Barcha huquqlar himoyalangan, 2025.</p>
+
+				<div class="made-on">
+					<span>Made on</span>
+					<img src="logo.svg" alt="Tilda" width="20" />
+					<span>Tilda</span>
+				</div>
+			</div>
+		</footer>
+
+		<script src="main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+		<!-- JavaScript: boshlash -->
+		<script>
+			const input = document.querySelector('#phone');
+			window.intlTelInput(input, {
+				initialCountry: 'uz', // Dastlabki davlat
+				utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js', // Formatlash uchun
+			});
+		</script>
+	</body>
+</html>
